@@ -13,7 +13,7 @@ import scvelo as scv
 #setting WD
 cwd = os.getcwd()
 print("Current working directory: {0}".format(cwd))
-os.chdir('/home/patrick/analysis_playground/velocyto/control_A/velocyto')
+os.chdir('/path/to/dir')
 
 #Working
 
@@ -40,3 +40,5 @@ scv.pl.scatter(adata, color="latent_time", color_map="gnuplot", dpi=600)
 
 top_genes = adata.var["fit_likelihood"].sort_values(ascending=False).index[:300]
 scv.pl.heatmap(adata, var_names=top_genes, sortby="latent_time", col_color="seurat_clusters", n_convolve=100, figsize=(24, 12), col_cluster=(True))
+
+quit()
